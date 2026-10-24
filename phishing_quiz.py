@@ -6,7 +6,7 @@ def clear_screen():
 
 def run_phishing_training():
     clear_screen()
-    print("      🛡️  CodeAlpha Cyber Security Internship - Task 2  🛡️")
+    print("      [+] CodeAlpha Cyber Security Internship - Task 2")
     print("               Phishing Awareness Training Module")
     print("=" * 65)
     print("Developed by: Razin Hossain Sagor\n")
@@ -86,23 +86,23 @@ def run_phishing_training():
 
         user_choice_is_phishing = (ans == "P")
         if user_choice_is_phishing == q["is_phishing"]:
-            print("✅ CORRECT ANSWER!")
+            print("[+] RESULT: CORRECT ANSWER!")
             score += 1
         else:
-            print("❌ INCORRECT!")
+            print("[-] RESULT: INCORRECT!")
 
-        print("\n🔍 Key Security Indicators:")
+        print("\n[*] Key Security Indicators:")
         for indicator in q["indicators"]:
-            print(f"   {indicator}")
+            print(f"    - {indicator}")
         print("-" * 65)
         time.sleep(1)
 
     print("\n" + "=" * 65)
-    print(f"Training Complete! Your Awareness Score: {score} / {len(questions)}")
+    print(f"Training Complete! Final Score: {score} / {len(questions)}")
     if score == len(questions):
-        print("🏆 Excellent! You demonstrated strong awareness against phishing threats.")
+        print("[SUCCESS] Strong awareness demonstrated against common phishing vectors.")
     else:
-        print("⚠️  Keep practicing! Always verify sender domains and link destinations.")
+        print("[NOTICE] Awareness review recommended. Always inspect domains and link targets.")
     print("=" * 65 + "\n")
 
 if __name__ == "__main__":
